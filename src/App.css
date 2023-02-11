@@ -1,0 +1,27 @@
+.bx{
+    font-size: 10em;
+}
+
+.app__show-create{
+    background-color: red;
+    display: none;
+    backdrop-filter: blur(5px);
+}
+.app__icon-center{
+    display: flex;
+    justify-content: center;
+    /* align-content: center; */
+    /* text-align: center; */
+    /* align-self: center; */
+    width: 100%;
+    height: 90vh;
+}
+.app__icon-aside{
+    width: auto;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* https://github.com/MiguelAngelGV17/React_entregable3_gen22-1 */
