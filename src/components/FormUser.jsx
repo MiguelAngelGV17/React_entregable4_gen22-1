@@ -28,35 +28,55 @@ const FormUser = ({ createNewUser, updateInfo, updateUserById, showForm, handleS
             className={` ${showForm && `form__user form`}`}>
             <div className={`form__container ${!showForm && `form__show`}`}>
                 <button
-                    onClick={handleShowForm}>
-                    <i className='bx bx-message-square-x bx-flip-horizontal close__form' ></i>
+                    >
+                    <i onClick={handleShowForm} className='bx bx-message-square-x bx-flip-horizontal close__form' ></i>
                 </button>
                 <div className='form__item'>
                     <label htmlFor="email">Email</label>
-                    <input {...register('email')} type="email" id='email' placeholder='example@example.com' required />
+                    <input {...register('email')} 
+                    type="email" 
+                    id='email' 
+                    placeholder='example@example.com' 
+                    required />
                 </div>
                 <div className='form__item'>
                     <label htmlFor="password">Password</label>
-                    <input {...register('password')} type="password" id='password' placeholder='4 - 128 Characters' required />
+                    <input {...register('password')} 
+                    type="password" 
+                    id='password' 
+                    placeholder='4 - 128 Characters' 
+                    required />
                 </div>
                 <div className='form__item'>
                     <label htmlFor="firstName">First Name</label>
-                    <input {...register('first_name')} type="text" id='firstName' placeholder='Type your name' required />
+                    <input {...register('first_name')} 
+                    type="text" 
+                    id='firstName' 
+                    placeholder='Type your name' 
+                    required />
                 </div>
                 <div className='form__item'>
                     <label htmlFor="lastName">Last Name</label>
-                    <input {...register('last_name')} type="text" id='lastName' placeholder='Type your last name' required />
+                    <input {...register('last_name')} 
+                    type="text" 
+                    id='lastName' 
+                    placeholder='Type your last name' 
+                    required />
                 </div>
                 <div className='form__item'>
                     <label htmlFor="birthday">Birthday</label>
-                    <input {...register('birthday')} type="date" id='birthday' placeholder='' required />
+                    <input {...register('birthday')} 
+                    type="date" 
+                    id='birthday' 
+                    placeholder='' 
+                    required />
                 </div>
-                <button>
+                <button className='form__btn-submit'>
                     {updateInfo
                         ?
-                        'Update info'
+                        'Update Info'
                         :
-                        'add'}
+                        'Add User'}
                 </button>
             </div>
         </form>

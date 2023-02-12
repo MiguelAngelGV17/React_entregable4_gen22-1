@@ -1,11 +1,8 @@
 body{
-    width: 100%;
-    height: 100vh;
-    background-image: url(../bg-app-2.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
+    background-image: url(../bg-app-3.jpeg);
     color: white;
     text-shadow: 1px 1px 5px lightgreen, 1px 1px 5px purple;
+    user-select: none;
 }
 
 .app{
@@ -13,24 +10,42 @@ body{
     justify-content: center;
     margin-top: 2em;
     min-width: 360px;
+    min-height: 700px;
     width: 100%;
+    height: 50vh;
 }
-
-/*--- Permite ocultar el icono crear usuario --- */
-/* .app__show-create{ 
-    display: none;
-} */
 
 .app__title{
-    font-size: 3rem;
+    font-size: 2.5rem;
+    text-align: center;
 }
 
-.size-center{
-    font-size: 10em;
+.app__icon-center{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 50% 0;
 }
 
-.size-aside{
-    font-size: 4em;
+.app__icon-aside{
+    display: flex;
+    margin: 0 auto;
+    min-width: 360px;
+    max-width: 360px;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.size__center{
+    font-size: 10rem;
+}
+.size__aside{
+    font-size: 2rem;
+}
+
+.size__aside,
+.size__center{
     color: purple;
     padding: 0.1em;
     top: 10%;
@@ -41,17 +56,8 @@ body{
     text-shadow: 1px 1px 5px lightgreen, 1px 1px 5px purple;
 }
 
-.app__icon-center{
-    position: absolute;
-    justify-content: center;
-    width: 100%;
-    top: 45vh;
-}
-
-.app__icon-aside{
-    display: flex;
-    min-width: 360px;
-    gap: 2rem;
-    justify-content: center;
-    align-items: center;
+.size__center:hover,
+.size__aside:hover{
+    cursor: pointer;
+    transform: scale(1.3);
 }

@@ -1,32 +1,83 @@
-.user_card-container{
+.user_card-container,
+.user__card,
+.user_card-item
+{
     display: flex;
+    align-items: center;
+}
+    
+
+.user_card-container{
     flex-wrap: wrap;
     justify-content: center;
-    align-items: center;
-    margin-top: 2rem;
+    margin: 2rem;
     gap: 1em;
     overflow-y: scroll;
-    max-height: 600px; 
-    max-width: 1000px;
+    height: 80vh; 
+    max-width: 1200px;
+    font-size: 1.5rem;
+    padding-top: 0.6em;
+}
+
+.user_card-container::-webkit-scrollbar{
+    background-color: rgb(28, 28, 28);
+    border: 2px solid purple;
+    border-radius: 8px;
+}
+
+.user_card-container::-webkit-scrollbar-thumb{
+    border-radius: 8px;
+    background-color: rgba(0, 255, 221, 0.734);
+    width: 0.5rem;
 }
 
 .user__card{
-  display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  min-width: 250px;
-  height: 200px;
-  width: max-content;
-  background-color: rgba(175, 82, 35, 0.8);
+  justify-content: space-between;
+  min-width: 340px;
+  max-width: 350px;
+  height: 220px;
+  background-image: url(../bg-card.jpeg);
+  background-size: cover;
   border-radius: 15px;
-  line-height: 25px;
+  padding: 0.5em;
+  overflow: hidden;
+  box-shadow: 1px 1px 15px lightgreen, 1px 1px 15px purple;
 }
 
-.bx{
-    font-size: 2rem;
+.user__card-title{
+    text-transform: capitalize;
+}
+
+.user_card-item{
+    gap: 0.5rem;
+    font-weight: bolder;
+    max-width: 338px;
+    flex-wrap: wrap;
+    overflow-x: hidden;
+}
+.bxs-envelope,
+.bxs-calendar{
+    color: black;
+}
+
+.user__card-options{
+    letter-spacing: 1rem;
+}
+
+.user_card-container .bx{
+    font-size: 2.3rem;
 }
 
 .bxs-trash-alt{
     color: rgb(216, 23, 23);
+}
+
+.bxs-trash-alt,
+.bx-edit{
+    cursor: pointer;
+}
+.bxs-trash-alt:hover,
+.bx-edit:hover{
+    transform: scale(1.2);
 }
