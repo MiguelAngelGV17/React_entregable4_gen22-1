@@ -1,27 +1,57 @@
-.bx{
+body{
+    width: 100%;
+    height: 100vh;
+    background-image: url(../bg-app-2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    text-shadow: 1px 1px 5px lightgreen, 1px 1px 5px purple;
+}
+
+.app{
+    display: flex;
+    justify-content: center;
+    margin-top: 2em;
+    min-width: 360px;
+    width: 100%;
+}
+
+/*--- Permite ocultar el icono crear usuario --- */
+/* .app__show-create{ 
+    display: none;
+} */
+
+.app__title{
+    font-size: 3rem;
+}
+
+.size-center{
     font-size: 10em;
 }
 
-.app__show-create{
-    background-color: red;
-    display: none;
-    backdrop-filter: blur(5px);
+.size-aside{
+    font-size: 4em;
+    color: purple;
+    padding: 0.1em;
+    top: 10%;
+    right: 0;
+    border-radius: 50%;
+    background-color: white;
+    box-shadow: 1px 1px 10px lightgreen, 1px 1px 10px purple;
+    text-shadow: 1px 1px 5px lightgreen, 1px 1px 5px purple;
 }
+
 .app__icon-center{
-    display: flex;
+    position: absolute;
     justify-content: center;
-    /* align-content: center; */
-    /* text-align: center; */
-    /* align-self: center; */
     width: 100%;
-    height: 90vh;
+    top: 45vh;
 }
+
 .app__icon-aside{
-    width: auto;
-    height: auto;
     display: flex;
+    min-width: 360px;
+    gap: 2rem;
     justify-content: center;
     align-items: center;
 }
-
-/* https://github.com/MiguelAngelGV17/React_entregable3_gen22-1 */

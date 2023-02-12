@@ -10,9 +10,11 @@
     display: block;
     width: 100%;
   }
-  h1, h2, h3, h4, p, ul {
+  h1, h2, h3, h4, p, ul, li {
     margin-top: 0;
     margin-bottom: 0;
+    padding: 0;
+    list-style: none;
   }
   button {
     border: none;

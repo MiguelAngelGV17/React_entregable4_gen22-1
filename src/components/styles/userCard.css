@@ -1,0 +1,32 @@
+.user_card-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+    gap: 1em;
+    overflow-y: scroll;
+    max-height: 600px; 
+    max-width: 1000px;
+}
+
+.user__card{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-width: 250px;
+  height: 200px;
+  width: max-content;
+  background-color: rgba(175, 82, 35, 0.8);
+  border-radius: 15px;
+  line-height: 25px;
+}
+
+.bx{
+    font-size: 2rem;
+}
+
+.bxs-trash-alt{
+    color: rgb(216, 23, 23);
+}

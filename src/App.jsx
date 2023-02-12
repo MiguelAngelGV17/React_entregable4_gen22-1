@@ -35,7 +35,6 @@ function App() {
     const url = `https://users-crud.academlo.tech/users/${id}/`
     axios.delete(url)
       .then(res => {
-        // console.log(res.data)
         console.log('The user was deleted successfully')
         getAllUsers()
       })
@@ -48,7 +47,7 @@ function App() {
       .then(res => {
         getAllUsers()
         setUpdateInfo()
-        console.log(res);
+        console.log(res.data);
       })
       .catch(err => console.log(err))
   }
@@ -57,24 +56,38 @@ function App() {
     e.preventDefault()
     setShowForm(!showForm)
   }
-  console.log(updateInfo);
+  const handleOpen = () => setShowForm(!showForm)
+  // const handleClose = () => setShowForm(false)
 
   return (
     <div className="app">
-      <div>
-        <h1>Users List</h1>
-        <div className=
-        {`
-        ${!showForm && `app__icon-center`}
-        ${updateInfo ? `app__icon-aside` : ``}
-        `}>
-        <button
-          className={`app__btn-create ${showForm && `app__show-create`}`}
-          onClick={handleShowForm}
-          ><i className={`bx bxs-user-plus`}></i>
-        </button>
+      <div >
+        <div
+          className={`${users?.length === 0
+            ?
+            `app__icon-center`
+            :
+            `app__icon-aside`}
+        `}
+        >
+          <h1 className='app__title'>Users Form</h1>
+          <button
+            className={`app__btn-create ${showForm && `app__show-create`}`}
+            onClick={handleShowForm}
+          ><i 
+          className={
+            `bx bxs-user-plus
+            ${users?.length === 0
+            ?
+            `size-center`
+            :
+            `size-aside`} 
+          `}          
+          >
+          </i>
+          </button>
         </div>
-        <div>
+        <div >
           <FormUser
             createNewUser={createNewUser}
             updateUserById={updateUserById}
@@ -83,7 +96,7 @@ function App() {
             handleShowForm={handleShowForm}
           />
         </div>
-        <div>
+        <div className='user_card-container'>
           {
             users?.map(user => (
               <UserCard
@@ -91,6 +104,7 @@ function App() {
                 user={user}
                 deleteUserById={deleteUserById}
                 setUpdateInfo={setUpdateInfo}
+                handleOpen={handleOpen}
               />
             ))
           }
